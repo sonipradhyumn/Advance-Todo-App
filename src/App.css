@@ -1,5 +1,7 @@
+
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -12,7 +14,86 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.alignment{
+  background-color: rgba(237, 237, 253, 0.685);
+  border-radius: 0.5rem;
+  padding-left: 1vw;
+  padding-right: 1vw;
 
+  margin: 1rem 8rem 1rem 8rem;
+  
+}
+.itsize{
+  background-color: white;
+  border-radius: 0.2rem;
+  border-width: 0.1rem;
+  border-color: rgb(158, 158, 158);
+  margin: 1vh;
+  height: 4vh;
+  width: 70vw;
+}
+.idsize{
+  background-color: white;
+  border-radius: 0.2rem;
+  border-width: 0.1rem;
+  margin: 1vh;
+  height: 10vh;
+  width: 70vw;
+}
+.mid{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;}
+  
+.button {
+  height:1.5rem;
+  width:5rem;
+  border-radius: 15px;
+  border-width: 1.5px;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  color: #fefeff;
+  background-color: #3f51b5;
+
+}
+.button1{
+  height:2rem;  
+  width:6rem;
+  color: #3f51b5;
+  margin:1vw;
+  border-color: #3f51b5b7;
+  background-color: transparent;
+}
+.button2{
+  height:2.5rem;  
+  width:2.5rem;
+  margin-left: 4vw;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+  background-color: transparent;
+}
+
+.button:hover {
+  background-color: #3f51b5b7; /* Green */
+  color: white;
+}
+.seprate{
+  /* background-color:aquamarine; */
+  display: inline-grid;
+  text-align: left;
+  justify-content: space-between;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  margin: 8vh;
+}
+.bright{
+  font-weight:bolder;
+}
+.dull{
+  font-weight:lighter;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -27,6 +108,14 @@
 .App-link {
   color: #61dafb;
 }
+.icc{
+  margin-top: -10px;
+    margin-left: -5px;
+}
+.numm{
+      margin-top: -13px;
+      margin-left: 5px;
+    }
 
 @keyframes App-logo-spin {
   from {
