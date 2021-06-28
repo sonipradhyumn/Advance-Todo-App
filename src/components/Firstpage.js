@@ -8,17 +8,27 @@ function Firstpage (props) {
     {
       title: 'Login',
       description: 'For more option login',
+      tags:'Requested',
       votes: '85',
       hidden: 'false',
     },
     {
       title: 'Pradhyumn soni',
       description: 'name of the person',
+      tags:'In Progress',
       votes: '25',
       hidden: 'false',
     },
+    {
+        title: 'Task',
+        description: 'Challenge 2',
+        tags:'Done',
+        votes: '25',
+        hidden: 'false',
+      },
   ];
   const [state, setstate] = useState (item);
+  const [filter,setfilter] = useState (state)
   const [show, setShow] = useState (state);
   const [Page, setPage] = useState (1);
   const [counts, setcount] = useState (1);
@@ -26,6 +36,7 @@ function Firstpage (props) {
   const [input, setinput] = useState ({
     title: '',
     description: '',
+    tags:'Requested',
     votes: '0',
     hidden: 'false',
   });
@@ -48,11 +59,18 @@ function Firstpage (props) {
       });
     }
   }
+  function refine(input){
+    let temp = [];
+    state.filter((item) => {if(item.tags===input){
+        temp.push(item) }});
+        console.log(temp)
+    setShow (temp);
+  }
 
   function addItem () {
     if (input.title || input.description) {
       setstate ([...state, input]);
-      setinput ({title: '', description: '', votes: '0', hidden: 'false'});
+      setinput ({title: '', description: '',tags:'Requested', votes: '0', hidden: 'false'});
     }
   }
 
@@ -115,7 +133,7 @@ function Firstpage (props) {
               >
                 Delete
               </button>
-              <button className="button">Requested</button>
+              <button className="button">{item.tags}</button>
               <button
                 className="seprate  button2 "
                 type="votes"
@@ -151,15 +169,15 @@ function Firstpage (props) {
       <div>
         {' '}
         <span>
-          <button className="button button1">
+          <button className="button button1" onClick={()=>{refine("Requested")}}>
             Requested
           </button>
         </span>
         <span>
-          <button className="button button1">Done</button>
+          <button className="button button1" onClick={()=>{refine("Done")}}>Done</button>
         </span>
         <span>
-          <button className="button button1">
+          <button className="button button1" onClick={()=>{refine("In Progress")}}>
             In Progress
           </button>
         </span>
