@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Advance-Todo-App/static/css/main.017a728c.chunk.css",
-    "main.js": "/Advance-Todo-App/static/js/main.5f87acdd.chunk.js",
-    "main.js.map": "/Advance-Todo-App/static/js/main.5f87acdd.chunk.js.map",
+    "main.css": "/Advance-Todo-App/static/css/main.f67747e0.chunk.css",
+    "main.js": "/Advance-Todo-App/static/js/main.b6f665e5.chunk.js",
+    "main.js.map": "/Advance-Todo-App/static/js/main.b6f665e5.chunk.js.map",
     "runtime-main.js": "/Advance-Todo-App/static/js/runtime-main.dd5db7b2.js",
     "runtime-main.js.map": "/Advance-Todo-App/static/js/runtime-main.dd5db7b2.js.map",
     "static/js/2.eaf2deb1.chunk.js": "/Advance-Todo-App/static/js/2.eaf2deb1.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.7dd6de24.chunk.js": "/Advance-Todo-App/static/js/3.7dd6de24.chunk.js",
     "static/js/3.7dd6de24.chunk.js.map": "/Advance-Todo-App/static/js/3.7dd6de24.chunk.js.map",
     "index.html": "/Advance-Todo-App/index.html",
-    "static/css/main.017a728c.chunk.css.map": "/Advance-Todo-App/static/css/main.017a728c.chunk.css.map",
+    "static/css/main.f67747e0.chunk.css.map": "/Advance-Todo-App/static/css/main.f67747e0.chunk.css.map",
     "static/js/2.eaf2deb1.chunk.js.LICENSE.txt": "/Advance-Todo-App/static/js/2.eaf2deb1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dd5db7b2.js",
     "static/js/2.eaf2deb1.chunk.js",
-    "static/css/main.017a728c.chunk.css",
-    "static/js/main.5f87acdd.chunk.js"
+    "static/css/main.f67747e0.chunk.css",
+    "static/js/main.b6f665e5.chunk.js"
   ]
 }
