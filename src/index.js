@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-//import Firstpage from './components/firstpage'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    {/* <Firstpage/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

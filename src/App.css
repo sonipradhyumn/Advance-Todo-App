@@ -1,27 +1,14 @@
 
 .App {
   text-align: center;
-  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 .alignment{
   background-color: rgba(237, 237, 253, 0.685);
   border-radius: 0.5rem;
   padding-left: 1vw;
   padding-right: 1vw;
-
   margin: 1rem 8rem 1rem 8rem;
-  
 }
 .itsize{
   background-color: white;
@@ -63,6 +50,7 @@
   margin:1vw;
   border-color: #3f51b5b7;
   background-color: transparent;
+  transition-duration: 0.8s;
 }
 .button2{
   height:2.5rem;  
@@ -71,14 +59,19 @@
   border-radius: 0.5rem;
   border-width: 0.1rem;
   background-color: transparent;
+  transition-duration: 1s;
 }
-
-.button:hover {
+.button1:hover {
+  background-color: #3f51b5b7; 
+  color: white;
+  cursor: pointer;
+}
+.button2:hover {
   background-color: #3f51b5b7; /* Green */
   color: white;
+  cursor: pointer;
 }
 .seprate{
-  /* background-color:aquamarine; */
   display: inline-grid;
   text-align: left;
   justify-content: space-between;
@@ -117,11 +110,4 @@
       margin-left: 5px;
     }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
