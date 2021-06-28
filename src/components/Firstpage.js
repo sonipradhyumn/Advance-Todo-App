@@ -2,33 +2,34 @@ import React, {Fragment, useState, useEffect} from 'react';
 import Pagination from '@material-ui/lab/Pagination';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 function Firstpage (props) {
   let item = [
     {
       title: 'Login',
       description: 'For more option login',
-      tags:'Requested',
+      tags: 'Requested',
       votes: '85',
       hidden: 'false',
     },
     {
       title: 'Pradhyumn soni',
       description: 'name of the person',
-      tags:'In Progress',
+      tags: 'In Progress',
       votes: '25',
       hidden: 'false',
     },
     {
-        title: 'Task',
-        description: 'Challenge 2',
-        tags:'Done',
-        votes: '25',
-        hidden: 'false',
-      },
+      title: 'Task',
+      description: 'Challenge 2',
+      tags: 'Done',
+      votes: '25',
+      hidden: 'false',
+    },
   ];
   const [state, setstate] = useState (item);
-  const [filter,setfilter] = useState (state)
+  const [filter, setfilter] = useState ('all');
   const [show, setShow] = useState (state);
   const [Page, setPage] = useState (1);
   const [counts, setcount] = useState (1);
@@ -36,7 +37,7 @@ function Firstpage (props) {
   const [input, setinput] = useState ({
     title: '',
     description: '',
-    tags:'Requested',
+    tags: 'Requested',
     votes: '0',
     hidden: 'false',
   });
@@ -59,18 +60,29 @@ function Firstpage (props) {
       });
     }
   }
-  function refine(input){
+  function refine (input) {
     let temp = [];
-    state.filter((item) => {if(item.tags===input){
-        temp.push(item) }});
-        console.log(temp)
+    state.filter (item => {
+      if (item.tags === input) {
+        temp.push (item);
+      }else if(input === 'all')
+      {temp.push (item);}
+      return(<></>)
+    });
     setShow (temp);
-  }
+    setfilter(input)
+    }
 
   function addItem () {
     if (input.title || input.description) {
       setstate ([...state, input]);
-      setinput ({title: '', description: '',tags:'Requested', votes: '0', hidden: 'false'});
+      setinput ({
+        title: '',
+        description: '',
+        tags: 'Requested',
+        votes: '0',
+        hidden: 'false',
+      });
     }
   }
 
@@ -166,21 +178,39 @@ function Firstpage (props) {
   return (
     <div>
 
-      <div>
+      <div className='midd'>
         {' '}
         <span>
-          <button className="button button1" onClick={()=>{refine("Requested")}}>
+          <button
+            className="button button1"
+            onClick={() => {
+              refine ('Requested');
+            }}
+          >
             Requested
           </button>
         </span>
         <span>
-          <button className="button button1" onClick={()=>{refine("Done")}}>Done</button>
+          <button
+            className="button button1"
+            onClick={() => {
+              refine ('Done');
+            }}
+          >
+            Done
+          </button>
         </span>
         <span>
-          <button className="button button1" onClick={()=>{refine("In Progress")}}>
+          <button
+            className="button button1"
+            onClick={() => {
+              refine ('In Progress');
+            }}
+          >
             In Progress
           </button>
         </span>
+        <span style={filter==='all'?{display:'none'} : {'cursor': 'pointer'}}> <CancelIcon onClick={()=>{refine('all')}}/></span>
       </div>
       {<Card />}
 
